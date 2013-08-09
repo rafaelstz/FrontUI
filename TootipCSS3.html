@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>Tootip CSS3</title>
+</head>
+<style>
+	@-webkit-keyframes teste /* Safari and Chrome */{
+from  {opacity:0;height:0px;}
+to {opacity:1;height:60px;}}
+@-o-keyframes teste{
+from  {opacity:0;height:0px;}
+to {opacity:1;height:60px;}}
+@-moz-keyframes teste {
+from  {opacity:0;height:0px;}
+to {opacity:1;height:60px;}}
+@keyframes teste {
+from  {opacity:0;height:0px;}
+to {opacity:1;height:60px;}}
+
+#tooltip-image{ 
+    background-color: #FA778E;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 3px;
+    cursor:pointer;
+}
+
+#tooltip-image p{ color:#fff; font-size:13px; text-align:center; font-weight:bold }
+
+#tooltip-container{ position:relative;}
+
+#tooltip-container #tooltip-box{
+	background: none repeat scroll 0 0 #000;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    position:absolute;
+    top:80%;
+    left:0;    
+    font-size:11px;
+    padding: 6px 6px;    
+    text-align: justify;
+    width: 260px;
+    z-index: 1000;
+    opacity: 0.95;
+    display:none;
+}
+#tooltip-container:hover #tooltip-box{display:block;
+	-webkit-animation:teste 0.7s; /* Safari and Chrome */
+	-webkit-animation-timing-function:ease;
+	-webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+
+
+	-moz-animation:teste 0.7s; /* Mozilla */
+	-moz-animation-timing-function:ease;
+	-moz-animation-direction: alternate;
+    -moz-animation-play-state: running;
+
+    -o-animation:teste 0.7s; /* Opera */
+	-o-animation-timing-function:ease;
+	-o-animation-direction: alternate;
+    -o-animation-play-state: running;
+
+	animation:teste 0.7s; /* All */
+	animation-timing-function:ease;
+	animation-direction: alternate;
+    animation-play-state: running;
+}
+</style>
+<body>
+	<div id="tooltip-container">
+           <div id="tooltip-image">
+           		<p>?</p><p>                
+           </p></div>
+           <div style="clear:both"></div>
+        
+           <div id="tooltip-box">
+              <p>Você deve digitar o código da sua Revendedora Amiamo para obter descontos e vantagens exclusivas.</p>
+          </div>
+        </div>
+</body>
+</html>
